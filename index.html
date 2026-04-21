@@ -12,14 +12,13 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,sans-seri
 .scr{display:none;flex-direction:column;flex:1;min-height:100vh}
 .scr.on{display:flex}
 
-/* ── Loading ── */
 #lov{position:fixed;inset:0;background:#fff;display:flex;align-items:center;justify-content:center;z-index:999;flex-direction:column;gap:12px}
 #lov.hide{display:none}
 .spin{width:28px;height:28px;border:3px solid #eee;border-top-color:#378ADD;border-radius:50%;animation:sp .7s linear infinite}
 @keyframes sp{to{transform:rotate(360deg)}}
 #lov p{font-size:13px;color:#aaa}
 
-/* ── Login ── */
+/* LOGIN */
 #sl{background:#fff;align-items:stretch;justify-content:center;padding:2.5rem 1.75rem}
 .login-head{margin-bottom:2.5rem;text-align:center}
 .login-head h1{font-size:26px;font-weight:700;color:#111;letter-spacing:-.5px}
@@ -28,11 +27,11 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,sans-seri
 .inp:focus{border-color:#378ADD;background:#fff}
 .inp::placeholder{color:#bbb}
 .err{font-size:12px;color:#E24B4A;min-height:18px;margin-bottom:10px;text-align:center}
-.lbtn{width:100%;padding:15px;border:none;border-radius:14px;font-size:15px;font-weight:600;cursor:pointer;background:#111;color:#fff;transition:opacity .15s;letter-spacing:.1px}
+.lbtn{width:100%;padding:15px;border:none;border-radius:14px;font-size:15px;font-weight:600;cursor:pointer;background:#111;color:#fff;transition:opacity .15s}
 .lbtn:hover{opacity:.85}
 .lbtn:active{opacity:.7}
 
-/* ── Home ── */
+/* HOME */
 #sh{background:#f0ede8}
 .hdr{padding:1.25rem 1.5rem 1rem;background:#fff;display:flex;align-items:center;justify-content:space-between}
 .hdr-left h2{font-size:20px;font-weight:700;color:#111;letter-spacing:-.3px}
@@ -41,7 +40,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,sans-seri
 .hdr-out:hover{background:#f5f5f5}
 .bars{display:flex;flex-direction:column;gap:12px;padding:16px}
 
-/* Bar */
 .bar-wrap{position:relative;border-radius:18px;overflow:hidden;cursor:pointer;height:138px;transition:transform .12s,box-shadow .12s;box-shadow:0 2px 12px rgba(0,0,0,.07)}
 .bar-wrap:active{transform:scale(.975)}
 .bar-bg{position:absolute;inset:0}
@@ -51,41 +49,50 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,sans-seri
 .bar-pct{font-size:13px;font-weight:600;margin-top:5px;opacity:.85}
 .bar-count{font-size:11px;margin-top:3px;opacity:.65;font-weight:500}
 
-/* ── Category ── */
+/* CATEGORIA */
 #sc{background:#fff}
-.topbar{display:flex;align-items:center;gap:10px;padding:1rem 1.25rem;border-bottom:1px solid #f2f2f2}
+.topbar{display:flex;align-items:center;gap:10px;padding:1rem 1.25rem;border-bottom:1px solid #f2f2f2;flex-shrink:0}
 .bbtn{width:34px;height:34px;border-radius:50%;background:#f5f5f5;border:none;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:18px;line-height:1;color:#555;flex-shrink:0}
 .bbtn:hover{background:#ebebeb}
 .tbartit{font-size:16px;font-weight:700;color:#111;letter-spacing:-.2px}
-.prog-area{padding:14px 1.25rem 10px}
+.prog-area{padding:14px 1.25rem 10px;flex-shrink:0}
 .prog-track{height:5px;background:#f0f0f0;border-radius:99px;overflow:hidden}
 .prog-bar{height:100%;border-radius:99px;transition:width .6s cubic-bezier(.4,0,.2,1)}
 .prog-lbl{font-size:11px;color:#bbb;margin-top:7px;font-weight:500}
 .tlist{overflow-y:auto;flex:1}
+
 .ti{display:flex;align-items:center;gap:14px;padding:.9rem 1.25rem;border-bottom:1px solid #f7f7f7;cursor:pointer;transition:background .1s}
 .ti:hover{background:#fafafa}
-.ck{width:26px;height:26px;border-radius:50%;border:2.5px solid;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:13px;color:#fff;transition:all .25s}
-.ti-label{font-size:13px;font-weight:600;color:#111;flex:1;line-height:1.5}
-.ti-label.done{color:#ccc;text-decoration:line-through;font-weight:400}
+.ti-left{display:flex;flex-direction:column;align-items:center;gap:5px;flex-shrink:0}
+.ti-label{font-size:13px;font-weight:700;color:#111;flex:1;line-height:1.5}
+.ti-label.done{color:#bbb;font-weight:400}
 .ti-arr{color:#ddd;font-size:20px;flex-shrink:0;line-height:1}
+.mini-dots{display:flex;gap:3px}
+.mini-dot{width:7px;height:7px;border-radius:50%;border:1.5px solid}
 
-/* ── Detail ── */
+/* DETALHE */
 #sd{background:#fff}
 .dcnt{padding:1.5rem 1.25rem 3rem;overflow-y:auto;flex:1}
-.d-ttl{font-size:20px;font-weight:800;color:#111;margin-bottom:1.25rem;line-height:1.45;letter-spacing:-.3px}
+.d-ttl{font-size:19px;font-weight:800;color:#111;margin-bottom:1.25rem;line-height:1.45;letter-spacing:-.3px}
 .d-body{font-size:14px;line-height:1.95;color:#555}
-.d-act{margin-top:2rem}
-.d-btn{width:100%;padding:.9rem;border:none;border-radius:14px;font-size:15px;font-weight:700;color:#fff;cursor:pointer;transition:opacity .15s;letter-spacing:.1px}
-.d-btn:hover{opacity:.87}
-.d-btn:active{opacity:.7}
-.d-done{width:100%;padding:.9rem;border-radius:14px;font-size:14px;font-weight:600;text-align:center;display:flex;align-items:center;justify-content:center;gap:8px}
+
+/* 5 BOLINHAS */
+.days-section{margin-top:2rem}
+.days-label{font-size:12px;font-weight:600;color:#aaa;letter-spacing:.5px;text-transform:uppercase;margin-bottom:14px}
+.days-row{display:flex;gap:12px;align-items:center;justify-content:center}
+.day-btn{display:flex;flex-direction:column;align-items:center;gap:6px;cursor:pointer;background:none;border:none;padding:0}
+.day-circle{width:48px;height:48px;border-radius:50%;border:2.5px solid;display:flex;align-items:center;justify-content:center;font-size:18px;transition:all .2s;color:#fff}
+.day-circle.empty{background:transparent;color:transparent}
+.day-num{font-size:10px;font-weight:600;color:#ccc}
+.day-num.checked{color:inherit}
+
+.d-done-badge{margin-top:2rem;padding:1rem;border-radius:14px;text-align:center;font-size:14px;font-weight:600;display:flex;align-items:center;justify-content:center;gap:8px}
 </style>
 </head>
 <body>
-
 <div id="lov"><div class="spin"></div><p>Carregando...</p></div>
-
 <div id="app">
+
   <!-- LOGIN -->
   <div id="sl" class="scr">
     <div class="login-head">
@@ -132,16 +139,21 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,sans-seri
     <div class="dcnt">
       <div class="d-ttl" id="d-title"></div>
       <div class="d-body" id="d-body"></div>
-      <div class="d-act" id="d-action"></div>
+      <div class="days-section" id="d-days"></div>
     </div>
   </div>
-</div>
 
+</div>
 <script>
 const SB_URL='https://tkvsftpbyqejrumdkoqj.supabase.co';
 const SB_KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRrdnNmdHBieXFlanJ1bWRrb3FqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzY3ODYxMjMsImV4cCI6MjA5MjM2MjEyM30.bhr4MZH0FAJpRoI7THniNp9J59GJfzoUwoHwxZ36mH8';
 const sb=supabase.createClient(SB_URL,SB_KEY);
 
+/* ─── CONTEÚDO ─────────────────────────────────────────────────────────────
+   Para editar: altere o texto entre as aspas em cada { id, t, c }
+   t = título em negrito
+   c = explicação completa
+   ───────────────────────────────────────────────────────────────────────── */
 const CATS=[
   {id:'sono',name:'Sono',full:'#2A87D0',light:'#D6EAF8',text:'#1A5276',topics:[
     {id:1,t:'Mantenha horários regulares de sono',c:'Acordar e dormir nos mesmos horários todos os dias — inclusive fins de semana — é uma das estratégias mais poderosas para regular o ritmo circadiano. Seu corpo possui um relógio biológico interno que controla ciclos de sono e vigília, temperatura corporal, hormônios e metabolismo. Quando você mantém horários consistentes, esse relógio se sincroniza com mais eficiência, tornando o adormecer e o acordar naturais e espontâneos. Mesmo que tenha dormido mal em uma noite, resista ao impulso de compensar dormindo muito mais no dia seguinte — isso pode desfazer o alinhamento circadiano e dificultar o sono nas noites seguintes.'},
@@ -153,22 +165,22 @@ const CATS=[
     {id:7,t:'Evite álcool próximo ao horário de dormir',c:'Embora o álcool tenha efeito sedativo inicial, ele fragmenta o sono nas horas seguintes. Seu metabolismo gera compostos que perturbam as fases profundas e restauradoras do sono (ondas lentas e REM). O resultado: sono superficial, mais despertares noturnos, sonhos vívidos e cansaço ao acordar mesmo após muitas horas na cama. Evite bebidas alcoólicas pelo menos 3 a 4 horas antes de dormir.'},
     {id:8,t:'Não durma com fome nem com excesso alimentar',c:'Dormir com fome pode causar despertares noturnos — o organismo sinaliza necessidade de energia. Por outro lado, refeições volumosas próximas ao horário de dormir sobrecarregam o sistema digestivo e aumentam o risco de refluxo. O ideal é jantar de 2 a 3 horas antes de deitar, com refeições leves. Se sentir fome, um pequeno lanche rico em triptofano (banana, leite morno) pode ajudar sem sobrecarregar a digestão.'},
     {id:9,t:'Pratique exercício físico regularmente',c:'A atividade física regular melhora a qualidade do sono, aumenta o tempo nas fases profundas e reduz o tempo para adormecer. O mecanismo envolve regulação de adenosina, temperatura corporal e ritmo circadiano. Exercícios de moderada intensidade — caminhada, ciclismo, natação — são particularmente benéficos. Treinos muito intensos realizados 1 a 2 horas antes de dormir podem dificultar o sono em pessoas sensíveis.'},
-    {id:10,t:'Exponha-se à luz natural pela manhã',c:'A exposição à luz solar logo ao acordar é um dos sinais mais poderosos para sincronizar o relógio biológico. Ela suprime a melatonina residual, aumenta a temperatura corporal e sinaliza ao cérebro que o dia começou — antecipando naturalmente a sonolência para o final do dia. Recomenda-se pelo menos 10 a 30 minutos de exposição nas primeiras horas. Uma caminhada matinal ou tomar café próximo à janela já fazem diferença.'},
+    {id:10,t:'Exponha-se à luz natural pela manhã',c:'A exposição à luz solar logo ao acordar é um dos sinais mais poderosos para sincronizar o relógio biológico. Ela suprime a melatonina residual, aumenta a temperatura corporal e sinaliza ao cérebro que o dia começou — antecipando naturalmente a sonolência para o final do dia. Recomenda-se pelo menos 10 a 30 minutos de exposição nas primeiras horas.'},
     {id:11,t:'Evite cochilos longos durante o dia',c:'Cochilos curtos (10 a 20 minutos) podem aumentar o estado de alerta sem prejudicar o sono noturno. Porém cochilos longos (acima de 45 a 60 minutos) ou no final da tarde reduzem a pressão de sono acumulada — a vontade de dormir que facilita o adormecer à noite. Se você tem dificuldades para dormir à noite, reduza ou elimine os cochilos diurnos como primeira estratégia.'},
     {id:12,t:'Reserve a cama apenas para dormir',c:'Trabalhar, assistir TV, comer ou usar o celular na cama ensina o cérebro a associar o ambiente a atividades de vigília. Esse é um princípio do controle de estímulos, pilar central da terapia cognitivo-comportamental para insônia (TCC-I). Quando você usa a cama exclusivamente para dormir, o cérebro aprende que deitar significa sono, facilitando o adormecer automaticamente.'},
-    {id:13,t:'Não fique olhando para o relógio à noite',c:'Verificar as horas durante despertares noturnos alimenta um ciclo de ansiedade: você calcula quanto tempo perdeu, quanto falta para acordar, se vai conseguir dormir — e essa ativação mental prolonga exatamente o estado que quer evitar. Vire o relógio ou coloque-o fora do alcance visual. Se precisar de alarme, use o do celular com a tela virada para baixo.'},
+    {id:13,t:'Não fique olhando para o relógio à noite',c:'Verificar as horas durante despertares noturnos alimenta um ciclo de ansiedade: você calcula quanto tempo perdeu, quanto falta para acordar, se vai conseguir dormir — e essa ativação mental prolonga exatamente o estado que quer evitar. Vire o relógio ou coloque-o fora do alcance visual.'},
     {id:14,t:'Gerencie preocupações antes de se deitar',c:'Uma das causas mais comuns de insônia é a mente que não consegue desligar — pensamentos sobre trabalho, problemas, tarefas. Uma estratégia eficaz: reserve 15 a 20 minutos no início da noite (não na cama) para escrever suas preocupações e o que precisa ser feito amanhã. Ao descarregar esses pensamentos no papel, o cérebro tem menos necessidade de processá-los na hora de dormir.'},
-    {id:15,t:'Pratique a respiração 4-7-8 para relaxar',c:'A técnica 4-7-8 ativa o sistema nervoso parassimpático com eficácia. Como praticar: inspire pelo nariz contando 4 tempos, segure o ar contando 7 tempos, expire pela boca contando 8 tempos. Repita 4 ciclos. Esse padrão estimula o nervo vago, reduz a frequência cardíaca e a pressão arterial, diminuindo a ativação do sistema simpático — o modo de alerta que impede o adormecer.'},
-    {id:16,t:'Limite líquidos nas 2 horas antes de dormir',c:'Acordar durante a noite para urinar é uma das causas mais comuns de sono fragmentado. Para minimizar isso, reduza a ingestão de líquidos nas 2 horas que antecedem o sono. Isso não significa desidratar-se — mantenha boa hidratação ao longo do dia, mas concentre a maior parte da ingestão nas horas da manhã e tarde. Certifique-se de urinar logo antes de deitar.'},
-    {id:17,t:'Mantenha o quarto silencioso ou use ruído branco',c:'Sons intermitentes e imprevisíveis — tráfego, vozes, animais — perturbam o sono mesmo durante fases profundas, ativando o sistema de alerta do cérebro. Se o ambiente for barulhento, considere tampões de ouvido ou um gerador de ruído branco. O ruído branco funciona por mascaramento: um som contínuo torna os ruídos intermitentes menos perceptíveis ao cérebro.'},
-    {id:18,t:'Evite trabalhar no quarto',c:'Levar trabalho para o quarto — notebook, celular, documentos — associa esse ambiente a estresse e estado de vigília. O ideal é que o quarto seja um espaço associado exclusivamente a descanso. Se morar em espaço pequeno, considere cobrir o computador ou criar uma separação visual do espaço de trabalho à noite, para que o ambiente sinalize descanso ao cérebro.'},
-    {id:19,t:'Pratique mindfulness ou meditação regularmente',c:'A prática regular de mindfulness reduz a atividade da amígdala e aumenta a capacidade de desengajamento de pensamentos ruminativos. Estudos mostram que 8 semanas de mindfulness (como o MBSR) melhoram significativamente a qualidade do sono e reduzem sintomas de insônia. Comece com 10 a 15 minutos diários — a regularidade importa mais que a duração da prática.'},
+    {id:15,t:'Pratique a respiração 4-7-8 para relaxar',c:'A técnica 4-7-8 ativa o sistema nervoso parassimpático com eficácia. Como praticar: inspire pelo nariz contando 4 tempos, segure o ar contando 7 tempos, expire pela boca contando 8 tempos. Repita 4 ciclos. Esse padrão estimula o nervo vago, reduz a frequência cardíaca e a pressão arterial, diminuindo a ativação do sistema simpático.'},
+    {id:16,t:'Limite líquidos nas 2 horas antes de dormir',c:'Acordar durante a noite para urinar é uma das causas mais comuns de sono fragmentado. Para minimizar isso, reduza a ingestão de líquidos nas 2 horas que antecedem o sono. Isso não significa desidratar-se — mantenha boa hidratação ao longo do dia, mas concentre a maior parte da ingestão nas horas da manhã e tarde.'},
+    {id:17,t:'Mantenha o quarto silencioso ou use ruído branco',c:'Sons intermitentes e imprevisíveis — tráfego, vozes, animais — perturbam o sono mesmo durante fases profundas. Se o ambiente for barulhento, considere tampões de ouvido ou um gerador de ruído branco. O ruído branco funciona por mascaramento: um som contínuo torna os ruídos intermitentes menos perceptíveis ao cérebro.'},
+    {id:18,t:'Evite trabalhar no quarto',c:'Levar trabalho para o quarto — notebook, celular, documentos — associa esse ambiente a estresse e estado de vigília. O ideal é que o quarto seja um espaço associado exclusivamente a descanso. Se morar em espaço pequeno, considere cobrir o computador ou criar uma separação visual do espaço de trabalho à noite.'},
+    {id:19,t:'Pratique mindfulness ou meditação regularmente',c:'A prática regular de mindfulness reduz a atividade da amígdala e aumenta a capacidade de desengajamento de pensamentos ruminativos. Estudos mostram que 8 semanas de mindfulness (como o MBSR) melhoram significativamente a qualidade do sono e reduzem sintomas de insônia. Comece com 10 a 15 minutos diários.'},
     {id:20,t:'Considere a suplementação de magnésio',c:'O magnésio participa de mais de 300 reações enzimáticas e tem papel importante na regulação do sistema nervoso. Estudos mostram que a suplementação (especialmente nas formas glicinato ou treonato) pode melhorar a qualidade do sono, reduzir o tempo para adormecer e diminuir os níveis de cortisol noturno. Converse com seu nutricionista antes de iniciar qualquer suplementação.'}
   ]},
   {id:'estresse',name:'Estresse',full:'#7B68D4',light:'#EAE7F9',text:'#3D2F9E',topics:[
-    {id:1,t:'Pratique respiração diafragmática diariamente',c:'A respiração diafragmática ativa o sistema nervoso parassimpático — o modo de repouso. Para praticar: coloque uma mão no peito e outra no abdômen. Inspire lentamente pelo nariz por 4 segundos, deixando o abdômen expandir (não o peito). Expire pela boca por 6 a 8 segundos. Repita por 5 minutos. Fazer isso 2 a 3 vezes ao dia — especialmente em momentos de tensão — treina o sistema nervoso a responder com maior calma.'},
+    {id:1,t:'Pratique respiração diafragmática diariamente',c:'A respiração diafragmática ativa o sistema nervoso parassimpático — o modo de repouso. Para praticar: coloque uma mão no peito e outra no abdômen. Inspire lentamente pelo nariz por 4 segundos, deixando o abdômen expandir (não o peito). Expire pela boca por 6 a 8 segundos. Repita por 5 minutos. Fazer isso 2 a 3 vezes ao dia treina o sistema nervoso a responder com maior calma.'},
     {id:2,t:'Pratique mindfulness por 10 minutos ao dia',c:'Mindfulness é prestar atenção ao momento presente de forma intencional e sem julgamento. Basta observar sua respiração, sensações corporais e pensamentos sem tentar controlá-los. A consistência é mais importante que a duração: 10 minutos diários por 8 semanas produzem mudanças mensuráveis no cérebro, especialmente nas regiões associadas ao estresse e à regulação emocional.'},
-    {id:3,t:'Movimente seu corpo com regularidade',c:'O exercício físico é um dos mais eficazes redutores de estresse disponíveis. Durante a atividade, o cérebro libera endorfinas, serotonina e dopamina, que elevam o humor e reduzem a ansiedade. O exercício também metaboliza hormônios do estresse como cortisol e adrenalina. Uma caminhada de 30 minutos já é suficiente para produzir efeitos mensuráveis no humor. A regularidade é mais importante que a intensidade.'},
+    {id:3,t:'Movimente seu corpo com regularidade',c:'O exercício físico é um dos mais eficazes redutores de estresse disponíveis. Durante a atividade, o cérebro libera endorfinas, serotonina e dopamina, que elevam o humor e reduzem a ansiedade. O exercício também metaboliza hormônios do estresse como cortisol e adrenalina. Uma caminhada de 30 minutos já é suficiente para produzir efeitos mensuráveis no humor.'},
     {id:4,t:'Cultive conexões sociais de qualidade',c:'Relacionamentos saudáveis são um dos maiores fatores protetores contra o estresse crônico. A interação social positiva estimula a liberação de ocitocina, hormônio que reduz o cortisol e promove sensação de segurança. Invista em conexões que te nutrem — conversas presentes, atividades compartilhadas, expressão emocional autêntica.'},
     {id:5,t:'Escreva em um diário regularmente',c:'A escrita expressiva — colocar em palavras pensamentos e emoções sobre experiências estressantes — reduz a carga cognitiva e emocional associada a elas. Pesquisas do psicólogo James Pennebaker mostram que escrever sobre experiências difíceis por 15 a 20 minutos durante 3 a 4 dias melhora o bem-estar psicológico e fortalece o sistema imunológico.'},
     {id:6,t:'Estabeleça limites com notificações digitais',c:'Verificações constantes de e-mail, mensagens e redes sociais fragmentam a atenção e mantêm o sistema nervoso em estado de alerta contínuo. Estabeleça blocos de tempo para verificar mensagens em vez de responder a cada notificação. Desative notificações desnecessárias. Tenha períodos sem telefone — especialmente pela manhã e antes de dormir.'},
@@ -207,23 +219,33 @@ const CATS=[
     {id:5,t:'Aumente o NEAT — movimento no cotidiano',c:'NEAT (Non-Exercise Activity Thermogenesis) é o gasto calórico de todas as atividades físicas que não são exercícios formais. Em pessoas sedentárias, pode responder por 15 a 50% do gasto energético total. Estratégias simples: prefira escadas a elevadores, estacione mais longe, levante-se a cada 45 a 60 minutos quando trabalhar sentado.'},
     {id:6,t:'Pratique exercício ao ar livre quando possível',c:'Exercitar-se em ambientes naturais oferece benefícios adicionais: exposição à luz natural (regulação circadiana e síntese de vitamina D), redução do estresse por contato com a natureza e maior motivação. Estudos mostram maior satisfação e adesão a longo prazo em exercícios ao ar livre.'},
     {id:7,t:'Priorize consistência acima de intensidade',c:'O erro mais comum é começar com intensidade excessiva, acumular dor muscular intensa e abandonar em 2 a 3 semanas. Para iniciantes, a regra mais importante é: frequência antes de intensidade. Uma caminhada diária de 30 minutos por um ano inteiro supera em benefícios qualquer regime intenso mantido por um mês.'},
-    {id:8,t:'Respeite o descanso e a recuperação',c:'O músculo se fortalece durante o descanso, não durante o treino. Sem descanso adequado, ocorre excesso de treinamento: queda de performance, maior risco de lesões, fadiga crônica e imunossupressão. Para iniciantes: pelo menos 1 a 2 dias de descanso ativo por semana. O sono de qualidade é o maior recuperador.'},
+    {id:8,t:'Respeite o descanso e a recuperação',c:'O músculo se fortalece durante o descanso, não durante o treino. Sem descanso adequado, ocorre excesso de treinamento: queda de performance, maior risco de lesões, fadiga crônica e imunossupressão. Para iniciantes: pelo menos 1 a 2 dias de descanso ativo por semana.'},
     {id:9,t:'Hidrate-se antes, durante e após o exercício',c:'A desidratação de apenas 2% do peso corporal já compromete significativamente a performance física e cognitiva. Beba 500ml de água 2 horas antes do exercício; durante, 150 a 250ml a cada 15 a 20 minutos; após, reponha o que foi perdido pela transpiração.'},
     {id:10,t:'Faça aquecimento antes de treinar',c:'O aquecimento prepara progressivamente o organismo para o esforço: aumenta a temperatura muscular, eleva gradualmente a frequência cardíaca e respiratória, melhora a lubrificação articular e reduz o risco de lesões. Um bom aquecimento dura 5 a 10 minutos com movimentos dinâmicos.'},
     {id:11,t:'Exercite-se em grupo ou com um parceiro',c:'A motivação e a adesão a longo prazo são significativamente maiores quando há componente social no exercício. Um parceiro de treino gera responsabilidade mútua e compromisso social que vai além da força de vontade individual. Aulas em grupo combinam exercício com conexão social.'},
     {id:12,t:'Varie as modalidades de exercício',c:'Fazer sempre o mesmo tipo de exercício leva a adaptação e platô — o corpo se torna mais eficiente e o estímulo diminui. Combine modalidades: aeróbico + força + flexibilidade + equilíbrio. Essa variedade promove uma aptidão física mais completa e mantém o interesse a longo prazo.'},
     {id:13,t:'Monitore sua frequência cardíaca durante o exercício',c:'A frequência cardíaca máxima estimada é de 220 menos a idade. Para saúde geral, a zona de 60 a 75% da frequência máxima é a mais recomendada. Smartwatches e monitores de pulso facilitam esse acompanhamento.'},
-    {id:14,t:'Inclua exercícios de mobilidade na sua rotina',c:'Exercícios de mobilidade — especialmente para quadril, ombros, torácica e tornozelos — melhoram a postura, reduzem dores crônicas, previnem lesões e tornam os movimentos do cotidiano mais eficientes. 10 minutos de trabalho de mobilidade ao acordar é um investimento com alto retorno para a qualidade de vida.'},
+    {id:14,t:'Inclua exercícios de mobilidade na sua rotina',c:'Exercícios de mobilidade — especialmente para quadril, ombros, torácica e tornozelos — melhoram a postura, reduzem dores crônicas, previnem lesões e tornam os movimentos do cotidiano mais eficientes. 10 minutos de trabalho de mobilidade ao acordar é um investimento com alto retorno.'},
     {id:15,t:'Aprenda a escutar os sinais do seu corpo',c:'O exercício deve produzir desafio — algum desconforto é esperado. Mas há diferença fundamental entre dor muscular tardia (normal) e dor articular aguda ou persistente (sinal de alerta). Respeitar os limites do corpo não é fraqueza — é inteligência necessária para treinar por anos sem lesões.'}
   ]}
 ];
 
 let patient=null, prog={}, curCat=null, curTopic=null;
-
 const $=id=>document.getElementById(id);
 function loading(v){$('lov').className=v?'':'hide';}
 function showScr(id){document.querySelectorAll('.scr').forEach(s=>s.classList.remove('on'));$(id).classList.add('on');}
-function getPct(cid){const c=CATS.find(x=>x.id===cid);return Math.round(((prog[cid]||[]).length/c.topics.length)*100);}
+
+function getDays(catId,tid){return(prog[catId]&&prog[catId][tid])||[];}
+function isComplete(catId,tid){return getDays(catId,tid).length>=5;}
+function getPct(cid){
+  const c=CATS.find(x=>x.id===cid);
+  const done=c.topics.filter(t=>isComplete(cid,t.id)).length;
+  return Math.round((done/c.topics.length)*100);
+}
+function countDone(cid){
+  const c=CATS.find(x=>x.id===cid);
+  return c.topics.filter(t=>isComplete(cid,t.id)).length;
+}
 
 async function init(){
   loading(true);
@@ -233,9 +255,7 @@ async function init(){
     await loadProg();
     renderHome();
     showScr('sh');
-  } else {
-    showScr('sl');
-  }
+  }else{showScr('sl');}
   loading(false);
 }
 
@@ -245,31 +265,27 @@ async function doLogin(){
   const err=$('err-msg');
   if(!name){err.textContent='Digite seu nome.';return;}
   if(!email||!email.includes('@')){err.textContent='Digite um e-mail válido.';return;}
-  err.textContent='';
-  loading(true);
+  err.textContent='';loading(true);
   try{
     const {error}=await sb.from('patients').upsert({email,name},{onConflict:'email'});
     if(error)throw error;
     patient={email,name};
     localStorage.setItem('hg-patient',JSON.stringify(patient));
-    await loadProg();
-    renderHome();
-    showScr('sh');
-  }catch(e){
-    err.textContent='Erro ao entrar. Verifique sua conexão e tente novamente.';
-    console.error(e);
-  }
+    await loadProg();renderHome();showScr('sh');
+  }catch(e){$('err-msg').textContent='Erro ao entrar. Verifique sua conexão.';console.error(e);}
   loading(false);
 }
 
 async function loadProg(){
   try{
-    const {data,error}=await sb.from('progress').select('category,topic_id').eq('patient_email',patient.email);
+    const {data,error}=await sb.from('progress').select('category,topic_id,day_number').eq('patient_email',patient.email);
     if(error)throw error;
     prog={};
     (data||[]).forEach(r=>{
-      if(!prog[r.category])prog[r.category]=[];
-      prog[r.category].push(r.topic_id);
+      if(!prog[r.category])prog[r.category]={};
+      if(!prog[r.category][r.topic_id])prog[r.category][r.topic_id]=[];
+      if(!prog[r.category][r.topic_id].includes(r.day_number))
+        prog[r.category][r.topic_id].push(r.day_number);
     });
   }catch(e){console.error(e);}
 }
@@ -278,7 +294,7 @@ function renderHome(){
   $('h-name').textContent='Olá, '+patient.name.split(' ')[0]+'!';
   $('bars').innerHTML=CATS.map(cat=>{
     const pct=getPct(cat.id);
-    const done=(prog[cat.id]||[]).length;
+    const done=countDone(cat.id);
     const total=cat.topics.length;
     return `<div class="bar-wrap" onclick="openCat('${cat.id}')">
       <div class="bar-bg" style="background:${cat.light}"></div>
@@ -296,18 +312,26 @@ function goHome(){renderHome();showScr('sh');}
 
 function openCat(catId){
   curCat=CATS.find(c=>c.id===catId);
-  const done=new Set(prog[catId]||[]);
   const pct=getPct(catId);
+  const done=countDone(catId);
   $('c-title').textContent=curCat.name;
   $('c-title').style.color=curCat.text;
   $('c-pb').style.width=pct+'%';
   $('c-pb').style.background=curCat.full;
-  $('c-lbl').textContent=done.size+' de '+curCat.topics.length+' orientações concluídas · '+pct+'%';
+  $('c-lbl').textContent=done+' de '+curCat.topics.length+' orientações concluídas · '+pct+'%';
   $('c-list').innerHTML=curCat.topics.map(tp=>{
-    const isDone=done.has(tp.id);
+    const days=getDays(catId,tp.id);
+    const complete=days.length>=5;
+    const dotsHtml=Array.from({length:5},(_,i)=>{
+      const filled=days.includes(i+1);
+      return `<div class="mini-dot" style="background:${filled?curCat.full:'transparent'};border-color:${curCat.full}"></div>`;
+    }).join('');
     return `<div class="ti" onclick="openTopic(${tp.id})">
-      <div class="ck" style="${isDone?`background:${curCat.full};border-color:${curCat.full}`:`border-color:${curCat.full}`}">${isDone?'✓':''}</div>
-      <div class="ti-label${isDone?' done':''}">${tp.t}</div>
+      <div class="ti-left">
+        <div class="mini-dots">${dotsHtml}</div>
+        <div style="font-size:9px;color:${curCat.text};opacity:.6;font-weight:600">${days.length}/5</div>
+      </div>
+      <div class="ti-label${complete?' done':''}">${tp.t}</div>
       <div class="ti-arr">›</div>
     </div>`;
   }).join('');
@@ -316,27 +340,55 @@ function openCat(catId){
 
 function openTopic(tid){
   curTopic=curCat.topics.find(t=>t.id===tid);
-  const isDone=(prog[curCat.id]||[]).includes(tid);
+  const days=getDays(curCat.id,tid);
+  const complete=days.length>=5;
   $('d-catname').textContent=curCat.name;
   $('d-catname').style.color=curCat.text;
   $('d-title').textContent=curTopic.t;
   $('d-body').textContent=curTopic.c;
-  $('d-action').innerHTML=isDone
-    ?`<div class="d-done" style="background:${curCat.light};color:${curCat.text}">✓ &nbsp;Orientação concluída</div>`
-    :`<button class="d-btn" style="background:${curCat.full}" onclick="markDone(${tid})">Marcar como concluído</button>`;
+  renderDays(tid,days,complete);
   $('d-back').onclick=()=>openCat(curCat.id);
   showScr('sd');
 }
 
-async function markDone(tid){
-  if(!prog[curCat.id])prog[curCat.id]=[];
-  if(!prog[curCat.id].includes(tid)){
-    prog[curCat.id].push(tid);
-    try{
-      await sb.from('progress').insert({patient_email:patient.email,category:curCat.id,topic_id:tid});
-    }catch(e){prog[curCat.id]=prog[curCat.id].filter(x=>x!==tid);console.error(e);}
+function renderDays(tid,days,complete){
+  if(complete){
+    $('d-days').innerHTML=`<div class="d-done-badge" style="background:${curCat.light};color:${curCat.text}">✓ &nbsp;Orientação concluída — 5/5 dias</div>`;
+    return;
   }
-  openTopic(tid);
+  const circles=Array.from({length:5},(_,i)=>{
+    const day=i+1;
+    const filled=days.includes(day);
+    return `<button class="day-btn" onclick="toggleDay(${tid},${day})" ${filled?'disabled':''}>
+      <div class="day-circle ${filled?'':'empty'}" style="background:${filled?curCat.full:'transparent'};border-color:${curCat.full}">
+        ${filled?'✓':''}
+      </div>
+      <div class="day-num ${filled?'checked':''}" style="${filled?'color:'+curCat.full:''}">${filled?'dia '+day:day+'º dia'}</div>
+    </button>`;
+  }).join('');
+  $('d-days').innerHTML=`
+    <div class="days-label">Marque cada dia que praticar</div>
+    <div class="days-row">${circles}</div>
+    <div style="font-size:11px;color:#bbb;text-align:center;margin-top:14px">${days.length}/5 dias concluídos</div>`;
+}
+
+async function toggleDay(tid,day){
+  const days=getDays(curCat.id,tid);
+  if(days.includes(day))return;
+  // Otimista: atualiza localmente primeiro
+  if(!prog[curCat.id])prog[curCat.id]={};
+  if(!prog[curCat.id][tid])prog[curCat.id][tid]=[];
+  prog[curCat.id][tid].push(day);
+  const newDays=getDays(curCat.id,tid);
+  renderDays(tid,newDays,newDays.length>=5);
+  try{
+    await sb.from('progress').insert({patient_email:patient.email,category:curCat.id,topic_id:tid,day_number:day});
+  }catch(e){
+    // Reverte se falhar
+    prog[curCat.id][tid]=prog[curCat.id][tid].filter(d=>d!==day);
+    renderDays(tid,getDays(curCat.id,tid),false);
+    console.error(e);
+  }
 }
 
 function doLogout(){
